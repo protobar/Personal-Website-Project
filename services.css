@@ -1,0 +1,123 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #ff2f87, #5d3ae5);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navigation styles */
+nav {
+    background: linear-gradient(to right, #ff2f87, #5d3ae5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 25px;
+  }
+  
+  nav ul li a {
+    position: relative;
+    font-size: 18px;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 0.2s ease-out;
+  }
+  
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: top left;
+  }
+
+/* Main styles */
+
+header h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 0 20px #ff2f87, 0 0 40px #ff2f87, 0 0 60px #ff2f87, 0 0 80px #ff2f87, 0 0 100px #ff2f87;
+  }
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+li {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff2f87, 0 0 20px #ff2f87, 0 0 30px #ff2f87, 0 0 40px #ff2f87;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
